@@ -1,0 +1,58 @@
+<p>list works!</p>
+<!-- <div class="container mt-5">
+    <h2 class="text-center mb-4">Event List</h2>
+    <div  class="alert alert-info text-center">
+      No events found.
+    </div>
+    <div class="list-group">
+      <div  class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+          <h5></h5>
+          <p><strong>Date:</strong>  <strong>Time:</strong></p>
+          <p><strong>Location:</strong> </p>
+          <p></p>
+        </div>
+        <div>
+          <button class="btn btn-warning btn-sm" >Edit</button>
+          <button class="btn btn-danger btn-sm" >Delete</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Event List</h2>
+    
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <!-- <th scpoe ="col"> Event id</th> -->
+          <th scope="col">Event Name</th>
+          <th scope="col">Date</th>
+          <th scope="col">Time</th>
+          <th scope="col">Location</th>
+          <th scope="col">Description</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of events">
+          <!-- <td>{{ event.id }}</td> -->
+          <td>{{ event.eventname }}</td>
+          <td>{{ event.eventdate  }}</td> 
+          <td>{{ event.eventtime }}</td>
+          <td>{{ event.eventlocation }}</td>
+          <td>{{ event.eventdescription }}</td>
+          
+           <td>
+            <!-- Your other HTML content -->
+<button class="btn btn-warning btn-sm me-4" [routerLink]="['/editsevent',event._id]">Edit</button>
+
+            <button class="btn btn-danger btn-sm" (click)="deleteEvent(event._id)" >Delete</button>
+          </td>
+        </tr>
+        <tr *ngIf="events.length === 0">
+          <td colspan="5" class="text-center">No events found.</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

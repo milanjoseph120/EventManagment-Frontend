@@ -1,0 +1,61 @@
+<p>editsevent works!</p>
+
+<div class="container mt-5 mb-5" style="background-color: blanchedalmond">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2 class="text-center mb-4">Edit Event</h2>
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="eventName" class="form-label">Event Name</label>
+            <input type="text" [(ngModel)]="eventname" [ngModelOptions]="{standalone: true}" id="eventName" class="form-control" required
+                   name="eventName" placeholder="Enter event name">
+          </div>
+          <div class="mb-3">
+            <label for="eventDate" class="form-label">Event Date</label>
+            <input type="date" [(ngModel)]="eventdate" [ngModelOptions]="{standalone: true}" id="eventDate" class="form-control" required
+                   name="eventDate">
+          </div>
+          <div class="mb-3">
+            <label for="eventTime" class="form-label">Event Time</label>
+            <input type="time" [(ngModel)]="eventtime" [ngModelOptions]="{standalone: true}" id="eventTime" class="form-control" required
+                   name="eventTime">
+          </div>
+          <div class="mb-3">
+            <label for="eventLocation" class="form-label">Event Location</label>
+            <input type="text" [(ngModel)]="eventlocation" [ngModelOptions]="{standalone: true}" id="eventLocation" class="form-control" required
+                   name="eventLocation" placeholder="Enter event location">
+          </div>
+          <div class="mb-3">
+            <label for="eventDescription" class="form-label">Event Description</label>
+            <textarea id="eventDescription" [(ngModel)]="eventdescription" [ngModelOptions]="{standalone: true}" class="form-control" required
+                      name="eventDescription" rows="4" placeholder="Enter event description"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-50" style="margin-left: 150px;"(click)="onSubmit()" [routerLink]="['/list']" >Edit Event</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <div *ngFor="let event of events">
+    <h3>{{ event.eventname }}</h3>
+    <button >Edit</button>
+  </div> -->
+  
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+  <!-- <div *ngFor="let event of events">
+            <h3>{{ event.eventname }}</h3>
+            <button type="submit" class="btn btn-primary w-100" (click)="onEdit(event)">Edit</button>
+          </div> -->
