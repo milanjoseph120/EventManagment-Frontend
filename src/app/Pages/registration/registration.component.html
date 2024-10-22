@@ -1,33 +1,40 @@
-<p>registration works!</p>
 
-
-<div class="container mt-5">
-    <div class="row justify-content-center">
+  <div class="container mt-5">
+    <div class="row justify-content-between">
+      <div class="col-md-6 d-flex align-items-center">
+        <img src="https://as1.ftcdn.net/v2/jpg/05/72/40/28/1000_F_572402842_zrbpAbKFBSK0lr1rDpaUkwoWnFVN9bIk.jpg" class="img-fluid w-100" alt="Image">
+      </div>
       <div class="col-md-6">
-        <h2 class="text-center mb-4">Register</h2>
-        <form>
-          <div class="mb-3">
-            <label for="firstname" class="form-label">First Name</label>
-            <input type="text" [(ngModel)]="firstname"  [ngModelOptions]="{standalone: true}" class="form-control" id="firstname"placeholder="Enter Name">
-          </div>
-          <div class="mb-3">
-            <label for="lastname" class="form-label">Last Name</label>
-            <input type="text"  [(ngModel)]="lastname"  [ngModelOptions]="{standalone: true}" id="lastname" class="form-control" required name="Last name" placeholder="Choose a lastname">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email"  [(ngModel)]="email"  [ngModelOptions]="{standalone: true}" id="email" class="form-control" required name="email" placeholder="Enter your email">
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password"  [(ngModel)]="password"  [ngModelOptions]="{standalone: true}" id="password" class="form-control" required name="password" placeholder="Create a password">
-          </div>
-          <button type="submit" class="btn btn-primary w-100" (click)="save()">Register</button>
-          <div class="text-center mt-3">
-            <p>Already have an account? <a href="#">Login here</a></p>
-          </div>
-        </form>
+        <div class="card shadow-sm p-4">
+          <h2 class="text-center mb-4">Register</h2>
+          <form>
+            <div class="mb-3">
+              <label for="firstname" class="form-label">First Name</label>
+              <input type="text" [(ngModel)]="firstname" [ngModelOptions]="{standalone: true}" class="form-control" id="firstname" placeholder="Enter Name">
+            </div>
+            <div class="mb-3">
+              <label for="lastname" class="form-label">Last Name</label>
+              <input type="text" [(ngModel)]="lastname" [ngModelOptions]="{standalone: true}" id="lastname" class="form-control" required name="Last name" placeholder="Choose a lastname">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" id="email" class="form-control" required name="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" id="password" class="form-control" required name="password" placeholder="Create a password">
+            </div>
+            <div class="text-center mt-4">
+              <button type="submit" class="btn btn-primary w-50  " (click)="save()">Register</button>
+            </div>
+            <div class="text-center mt-3">
+              <p>Already have an account? <a href="#">Login here</a></p>
+            </div>
+          </form>
+        </div>
+       
       </div>
     </div>
   </div>
+  
   

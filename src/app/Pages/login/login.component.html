@@ -1,20 +1,27 @@
 
 
 
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-4">
+
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-between" style="margin-top: 100px;">
+    <div class="col-md-6 d-flex align-items-center">
+      <img src="https://membership.dailytrust.com/wp-content/uploads/2021/09/login-form.gif" class="img-fluid w-100" alt="Login Image">
+    </div>
+    <div class="col-md-6">
+      <div class="card shadow-sm p-4">
         <h2 class="text-center mb-4">Login</h2>
         <form>
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email"   [(ngModel)]="email"  [ngModelOptions]="{standalone: true}" id="email" class="form-control" required name="email" placeholder="Enter your email">
+            <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" id="email" class="form-control" required name="email" placeholder="Enter your email">
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" [(ngModel)]="password"  [ngModelOptions]="{standalone: true}" id="password" class="form-control" required name="password" placeholder="Enter your password">
+            <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" id="password" class="form-control" required name="password" placeholder="Enter your password">
           </div>
-          <button type="submit" class="btn btn-primary w-100" (click)="login()">Login</button>
+          <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary w-50" (click)="login()">Login</button>
+          </div>
           <div class="text-center mt-3">
             <a [routerLink]="['/registration']">Register</a>
           </div>
@@ -22,4 +29,8 @@
       </div>
     </div>
   </div>
+</div>
+
+
+
   
