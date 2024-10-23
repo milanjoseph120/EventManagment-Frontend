@@ -24,7 +24,7 @@ export const routes: Routes = [
   },
   { path: 'creation', redirectTo: '/creation', pathMatch: 'full' },
   {
-    path: 'details',
+    path: 'details/:id',
     component: DetailComponent
   },
   {

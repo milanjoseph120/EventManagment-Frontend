@@ -1,74 +1,73 @@
-<p>detail works!</p>
 
-
-<!-- <div class="container mt-5">
-    <h2 class="text-center mb-4"></h2>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text"><strong>Date:</strong>  <strong>Time:</strong> </p>
-        <p class="card-text"><strong>Location:</strong></p>
-        <p class="card-text"></p>
-  
-        <h4 class="mt-4">Register for this event</h4>
-        <form >
-          <div class="mb-3">
-            <label for="username" class="form-label">Your Name</label>
-            <input type="text" id="username" class="form-control" required
-                    name="username" placeholder="Enter your name">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Your Email</label>
-            <input type="email" id="email" class="form-control" required
-                   name="email" placeholder="Enter your email">
-          </div>
-          <button type="submit" class="btn btn-primary">Register</button>
-        </form>
+<!-- <div class="container">
+  <h2>Event Registration</h2>
+  <div>
+    <img src="https://img.freepik.com/premium-photo/3d-young-business-man-wearing-black-suit-tie-with-happy-face-open-arms-warm-welcoming_848485-1563.jpg?w=360" alt="image">
+  </div>
+  <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" class="form-control" />
+      <div *ngIf="eventForm.get('name')?.invalid && eventForm.get('name')?.touched" class="text-danger">
+        Name is required.
       </div>
     </div>
-  </div> -->
-  
 
-  <div class="container mt-5">
-    <h2 class="text-center mb-4">Event Details</h2>
-  
-    <div  class="card">
-      <div class="card-body">
-        <table class="table table-striped">
-            <thead>
-              <tr>
-                <th scope="col">Event Name</th>
-                <th scope="col">Date</th>
-                <th scope="col">Time</th>
-                <th scope="col">Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr >
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-               
-              </tr>
-            </tbody>
-          </table>
-  
-        <h4 class="mt-4">Register for this event</h4>
-        <form >
-          <div class="mb-3">
-            <label for="username" class="form-label">Your Name</label>
-            <input type="text" id="username" class="form-control" required
-                    name="username" placeholder="Enter your name">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Your Email</label>
-            <input type="email" id="email" class="form-control" required
-                    name="email" placeholder="Enter your email">
-          </div>
-          <button type="submit" class="btn btn-primary">Register</button>
-        </form>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email" class="form-control" />
+      <div *ngIf="eventForm.get('email')?.invalid && eventForm.get('email')?.touched" class="text-danger">
+        Valid email is required.
       </div>
+    </div>
+
+    <div class="container">
+      <h2>Event Name</h2>
+      <input type="text" [(ngModel)]="event" [ngModelOptions]="{ standalone: true }" name="eventname" placeholder="Enter event name" />
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-primary mt-4">Register</button>
+    </div>
+  </form>
+</div> -->
+
+
+<div class="container my-5">
+  <h2 class="text-center mb-4">Event Registration</h2>
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <img src="https://img.freepik.com/premium-photo/3d-young-business-man-wearing-black-suit-tie-with-happy-face-open-arms-warm-welcoming_848485-1563.jpg?w=360" alt="image" class="img-fluid rounded-circle">
+    </div>
+    <div class="col-md-6">
+      <form [formGroup]="eventForm" (ngSubmit)="onSubmit()" class="shadow p-4 bg-light rounded">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input id="name" formControlName="name" class="form-control" />
+          <div *ngIf="eventForm.get('name')?.invalid && eventForm.get('name')?.touched" class="text-danger">
+            Name is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input id="email" type="email" formControlName="email" class="form-control" />
+          <div *ngIf="eventForm.get('email')?.invalid && eventForm.get('email')?.touched" class="text-danger">
+            Valid email is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="eventname">Event Name:</label>
+          <input type="text" [(ngModel)]="event" [ngModelOptions]="{ standalone: true }" name="eventname" class="form-control" placeholder="Enter event name" />
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary mt-4">Register</button>
+        </div>
+      </form>
     </div>
   </div>
+</div>
+
   

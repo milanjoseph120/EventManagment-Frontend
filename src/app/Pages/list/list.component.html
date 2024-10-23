@@ -46,7 +46,9 @@
             <!-- Your other HTML content -->
 <button class="btn btn-warning btn-sm me-4" [routerLink]="['/editsevent',event._id]">Edit</button>
 
-            <button class="btn btn-danger btn-sm" (click)="deleteEvent(event._id)" >Delete</button>
+            <button class="btn btn-danger btn-sm me-4" (click)="deleteEvent(event._id)" >Delete</button>
+
+            <button class="btn btn-success btn-sm " [routerLink]="['/details' ,event._id ]" >Register</button>
           </td>
         </tr>
         <tr *ngIf="events.length === 0">

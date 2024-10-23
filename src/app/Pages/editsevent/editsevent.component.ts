@@ -86,46 +86,4 @@ export class EditseventComponent implements OnInit {
 
 
 
-//updateEvent(): void {
-  //     const updatedData = {
-  //       eventname: this.eventname,
-  //       eventdate: this.eventdate,
-  //       eventtime: this.eventtime,
-  //       eventlocation: this.eventlocation,
-  //       eventdescription: this.eventdescription,
-  //     };
-  //   // Method to update an event
-  //   updateEvent(eventId: string, updatedData: any): void {
-  //     this.http.put(`http://localhost:4000/api/events/${eventId}`, updatedData).subscribe( // Use eventId here
-  //       (response) => {
-  //         console.log('Event updated successfully:', response);
-  //         this.getEvents(); // Refresh the event list after update
-  //       },
-  //       (error) => {
-  //         console.error('Error updating event:', error);
-  //         alert("Failed to update event. Please try again.");
-  //       }
-  //     );
-  //   }
-  
-   
-  //   onEdit(event: any): void {
-     
-  //     this.eventId = event.id; 
-  //     this.eventname = event.eventname;
-  //     this.eventdate = event.eventdate;
-  //     this.eventtime = event.eventtime;
-  //     this.eventlocation = event.eventlocation;
-  //     this.eventdescription = event.eventdescription;
-  
-      
-  //     const updatedData = {
-  //       eventname: this.eventname,
-  //       eventdate: this.eventdate,
-  //       eventtime: this.eventtime,
-  //       eventlocation: this.eventlocation,
-  //       eventdescription: this.eventdescription,
-  //     };
-  
-  //     this.updateEvent(this.eventId, updatedData);
    
